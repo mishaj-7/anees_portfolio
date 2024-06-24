@@ -6,23 +6,26 @@
     <title>Mohamed Anees</title>
     <link rel="icon" type="image/png" href="./assets/ca_logo_header.png">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/899b5d29b8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img  src="/assets/anees_logo_header_new.png" alt="" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <a href=""><img  src="/assets/anees_logo_header_new.png" alt="" class="logo"></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>
+                <i class=" fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>CA/CMA Professional</p>
-                <h1>Hi, i'm mohamed <span>anees</span> <br> experienced charterd accountant</h1>
+                <h1>Hi, i'm <span>anees</span> <br> experienced Auditing expert</h1>
             </div>
         </div>
     </div>
@@ -40,11 +43,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. laboris nisi ut aliquip ex ea commodo consequat.laboris nisi ut aliquip ex ea commodo consequat.laboris nisi ut aliquip ex ea commodo consequat.laboris nisi ut aliquip ex ea commodo consequat. </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>INCOME TAX</span><br>auditing and filing</li>
                             <li><span>GST TAX</span><br>filing</li>
@@ -52,7 +55,7 @@
                             
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>An international</span><br>acount designer at zoho</li>
                             <li><span>GST TAX</span><br>consultant at IBM LLc</li>
@@ -60,7 +63,7 @@
                             
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2023</span><br>CA at havard</li>
                             <li><span>2016</span><br>MBA at MITs</li>
@@ -72,8 +75,152 @@
             </div>
         </div>
     </div>
+    <!-- ---------------------- services -------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2>Tax failing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-receipt"></i>
+                    <h2>Gst Auditing</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h2>Tax/Gst Cosnultation</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!------------------ My Work ----------------- -->
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="assets/ca_work1.png">
+                    <div class="layer">
+                       <h3>Auditing Taxes</h3>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                       <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/ca_work2.png">
+                    <div class="layer">
+                       <h3>Gst/Auditing</h3>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                       <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/ca_work3.png">
+                    <div class="layer">
+                       <h3>Tps Consultation</h3>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+                       <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ------------------ contact us ------------ -->
+
+    <div id="contact">
+        <div class="container">
+           <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>anees@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>+91-1847293</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    
+                </div> 
+                <a href="assets/smaple_cv.pdf" download class="btn btn2">Download cv</a>       
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Send</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+           </div> 
+        </div>
+        <div class="copyright">
+            <p>Copyright © anees. <i class="fa-solid fa-laptop-code"></i> made with <a href="https://www.linkedin.com/in/mishaj-k-b195aa195/" target="_blank">Mishaj</a> </p>
+        </div>
+    </div>
+
+
+    <script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+        
+        function openTab(tabName) {
+            for(tabLink of tabLinks) {
+                tabLink.classList.remove('active-link')
+            }
+            for(tabContent of tabContents) {
+                tabContent.classList.remove('active-tab')
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+    </script>
+
+    <script>
+        
+        var sideMenu = document.getElementById("sidemenu");
+
+        function openMenu() {
+            sideMenu.style.right = '0';
+        };
+
+        function closeMenu() {
+            sideMenu.style.right = '-200px';
+        }
+
+    </script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbywSrlzluYVjtdOqUMRaovSmgJqxX41rVPP68L7Fjm-jvAM5iLkySDpWNyrGQlKRBGK3A/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById('msg')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = 'Message sent success'
+        setTimeout(function() {
+            msg.innerHTML = ""
+        },2000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 </body>
 </html>
